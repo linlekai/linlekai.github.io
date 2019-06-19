@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>this | Luke 的博客</title>
+    <meta name="description" content="使用Vuepress构建的博客">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.3e9a3537.css" as="style"><link rel="preload" href="/assets/js/app.c8aad499.js" as="script"><link rel="preload" href="/assets/js/2.debfdad6.js" as="script"><link rel="preload" href="/assets/js/19.b38e2b66.js" as="script"><link rel="prefetch" href="/assets/js/10.48f96f87.js"><link rel="prefetch" href="/assets/js/11.1cabf9e2.js"><link rel="prefetch" href="/assets/js/12.13ee17ab.js"><link rel="prefetch" href="/assets/js/13.75a7205f.js"><link rel="prefetch" href="/assets/js/14.62fdd8a3.js"><link rel="prefetch" href="/assets/js/15.80473861.js"><link rel="prefetch" href="/assets/js/16.92d96636.js"><link rel="prefetch" href="/assets/js/17.70e4b341.js"><link rel="prefetch" href="/assets/js/18.52e3835e.js"><link rel="prefetch" href="/assets/js/20.47054f0a.js"><link rel="prefetch" href="/assets/js/21.32c32b52.js"><link rel="prefetch" href="/assets/js/22.12cba1f4.js"><link rel="prefetch" href="/assets/js/23.9c8927d1.js"><link rel="prefetch" href="/assets/js/24.8ca4c130.js"><link rel="prefetch" href="/assets/js/25.bc9d2a3d.js"><link rel="prefetch" href="/assets/js/26.ef72e736.js"><link rel="prefetch" href="/assets/js/3.a7372c04.js"><link rel="prefetch" href="/assets/js/4.b86fdf20.js"><link rel="prefetch" href="/assets/js/5.d0f45235.js"><link rel="prefetch" href="/assets/js/6.00438b46.js"><link rel="prefetch" href="/assets/js/7.cfe5be2b.js"><link rel="prefetch" href="/assets/js/8.5992f3a3.js"><link rel="prefetch" href="/assets/js/9.ac5f4d91.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3e9a3537.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Luke 的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/html/" class="sidebar-link">HTML</a></li><li><a href="/css/" class="sidebar-link">CSS</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/js/" class="sidebar-heading clickable router-link-active open"><span>JS 重点概念梳理</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/type.html" class="sidebar-link">JS变量类型</a></li><li><a href="/js/this.html" class="active sidebar-link">this</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/this.html#作为函数调用" class="sidebar-link">作为函数调用</a></li><li class="sidebar-sub-header"><a href="/js/this.html#作为对象方法调用" class="sidebar-link">作为对象方法调用</a></li><li class="sidebar-sub-header"><a href="/js/this.html#作为构造函数调用" class="sidebar-link">作为构造函数调用</a></li><li class="sidebar-sub-header"><a href="/js/this.html#使用-apply-或-call-调用" class="sidebar-link">使用 apply 或 call 调用</a></li><li class="sidebar-sub-header"><a href="/js/this.html#箭头函数的this" class="sidebar-link">箭头函数的this</a></li></ul></li><li><a href="/js/prototype.html" class="sidebar-link">prototype 原型</a></li><li><a href="/js/closure.html" class="sidebar-link">闭包与作用域链</a></li><li><a href="/js/class.html" class="sidebar-link">原型继承和 Class 继承</a></li><li><a href="/js/let.html" class="sidebar-link">var、let 及 const 区别</a></li><li><a href="/js/promise.html" class="sidebar-link">Promise</a></li><li><a href="/js/eventloop.html" class="sidebar-link">JS事件循环</a></li><li><a href="/js/new.html" class="sidebar-link">new的过程以及实现new</a></li><li><a href="/js/ajax.html" class="sidebar-link">Ajax</a></li></ul></section></li><li><a href="/library/" class="sidebar-link">前端框架</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/node/" class="sidebar-heading clickable"><span>node</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/engineering/" class="sidebar-link">工程化</a></li><li><a href="/job/" class="sidebar-link">面试之道</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="this"><a href="#this" aria-hidden="true" class="header-anchor">#</a> this</h1> <p>由于其运行期绑定的特性，JavaScript 中的 this 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。JavaScript 中函数的调用有以下几种方式：作为对象方法调用，作为函数调用，作为构造函数调用，和使用 apply 或 call 调用。下面我们将按照调用方式的不同，分别讨论 this 的含义。</p> <p>this 被分为三种情况：全局对象、当前对象或者任意对象;判断处于那种情况，这完全取决于函数的调用方式，JavaScript 中函数的调用有以下几种方式：</p> <ul><li>作为函数调用</li> <li>作为对象方法调用</li> <li>作为构造函数调用</li> <li>使用 apply 或 call 调用</li></ul> <h2 id="作为函数调用"><a href="#作为函数调用" aria-hidden="true" class="header-anchor">#</a> 作为函数调用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  foo<span class="token punctuation">:</span> foo
+<span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> b <span class="token operator">=</span> obj<span class="token punctuation">.</span>foo
+<span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>普通函数的调用把this作为window对象的方法进行了调用，显然this指向了window对象</p> <ul><li>对于直接调用 foo 来说，不管 foo 函数被放在了什么地方，this 一定是 window</li> <li>对于 obj.foo() 来说，我们只需要记住，谁调用了函数，谁就是 this，所以在这个场景下 foo 函数中的 this 就是 obj 对象</li> <li>对于 new 的方式来说，this 被永远绑定在了 c 上面，不会被任何方式改变 this</li></ul> <h2 id="作为对象方法调用"><a href="#作为对象方法调用" aria-hidden="true" class="header-anchor">#</a> 作为对象方法调用</h2> <p>当我们调用 b() 的时候，变量b相当于window对象的一个属性，实际上是调用了 window.b() 。所以this指向的是window</p> <h2 id="作为构造函数调用"><a href="#作为构造函数调用" aria-hidden="true" class="header-anchor">#</a> 作为构造函数调用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'hello,world'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// hello,world</span>
+
+</code></pre></div><p>JavaScript 中的构造函数也很特殊，构造函数，其实就是通过这个函数生成一个新对象（object），这时候的 This 就会指向这个新对象；如果不使用 new 调用，则和普通函数一样。</p> <p>我们使用new 构造出的 a实例，这里的this会指向实例本身</p> <h2 id="使用-apply-或-call-调用"><a href="#使用-apply-或-call-调用" aria-hidden="true" class="header-anchor">#</a> 使用 apply 或 call 调用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token string">'hello world!'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">example</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 　
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> 　　
+<span class="token punctuation">}</span> 　　
+<span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 　
+o<span class="token punctuation">.</span>n <span class="token operator">=</span> <span class="token string">'hey~'</span><span class="token punctuation">;</span> 　　
+o<span class="token punctuation">.</span>m <span class="token operator">=</span> example<span class="token punctuation">;</span> 　　
+o<span class="token punctuation">.</span><span class="token function">m</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//hey~</span>
+</code></pre></div><p>使用call和apply可以改变this的指向，第一个参数为当作this的目标</p> <h2 id="箭头函数的this"><a href="#箭头函数的this" aria-hidden="true" class="header-anchor">#</a> 箭头函数的this</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>首先箭头函数其实是没有 this 的，箭头函数中的 this 只取决包裹箭头函数的第一个普通函数的 this。在这个例子中，因为包裹箭头函数的第一个普通函数是 a，所以此时的 this 是 window。另外对箭头函数使用 bind 这类函数是无效的。</p> <p>最后种情况也就是 bind 这些改变上下文的 API 了，对于这些函数来说，this 取决于第一个参数，如果第一个参数为空，那么就是 window。</p> <p><img src="https://cdn.nlark.com/yuque/0/2019/png/344243/1557718789230-b25eabe7-20be-4527-96cf-30a8b79925fd.png" alt="this"></p> <h3 id="call-apply-bind区别-怎么实现call-apply方法"><a href="#call-apply-bind区别-怎么实现call-apply方法" aria-hidden="true" class="header-anchor">#</a> call, apply, bind区别? 怎么实现call,apply方法</h3> <div class="language-js extra-class"><pre class="language-js"><code>jsFunction<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myBind</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!=</span><span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">'not a function'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> 
+    <span class="token keyword">let</span> <span class="token function-variable function">resFn</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">_this</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token keyword">instanceof</span> <span class="token class-name">resFn</span><span class="token operator">?</span><span class="token keyword">this</span><span class="token punctuation">:</span>content<span class="token punctuation">,</span>args<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> resFn
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ 
+ <span class="token comment">/**
+ * 每个函数都可以调用call方法，来改变当前这个函数执行的this关键字，并且支持传入参数
+ */</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myCall</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">=</span>window</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      context<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span><span class="token comment">//此处this是指调用myCall的function</span>
+      <span class="token keyword">let</span> args<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> result<span class="token operator">=</span>content<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+      <span class="token comment">//将this指向销毁</span>
+      <span class="token keyword">delete</span> context<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * apply函数传入的是this指向和参数数组
+ */</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">myApply</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token operator">=</span>window</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    context<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> result<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        result<span class="token operator">=</span>context<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        result<span class="token operator">=</span>context<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//将this指向销毁</span>
+    <span class="token keyword">delete</span> context<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/js/type.html" class="prev">
+          JS变量类型
+        </a></span> <span class="next"><a href="/js/prototype.html">
+          prototype 原型
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c8aad499.js" defer></script><script src="/assets/js/2.debfdad6.js" defer></script><script src="/assets/js/19.b38e2b66.js" defer></script>
+  </body>
+</html>
