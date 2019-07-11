@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS流体布局下的宽度分离原则 | Luke 的博客</title>
+    <meta name="description" content="使用Vuepress构建的博客">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.116391f7.css" as="style"><link rel="preload" href="/assets/js/app.3f85ca2b.js" as="script"><link rel="preload" href="/assets/js/2.8c8f942d.js" as="script"><link rel="preload" href="/assets/js/8.c2cd7ba8.js" as="script"><link rel="prefetch" href="/assets/js/10.49c64414.js"><link rel="prefetch" href="/assets/js/11.9310b1d2.js"><link rel="prefetch" href="/assets/js/12.94d2a3f9.js"><link rel="prefetch" href="/assets/js/13.d779ae7a.js"><link rel="prefetch" href="/assets/js/14.c5f93b2a.js"><link rel="prefetch" href="/assets/js/15.6f07edd7.js"><link rel="prefetch" href="/assets/js/16.f25b812a.js"><link rel="prefetch" href="/assets/js/17.22522c73.js"><link rel="prefetch" href="/assets/js/18.d4942681.js"><link rel="prefetch" href="/assets/js/19.29ca1924.js"><link rel="prefetch" href="/assets/js/20.a0947de3.js"><link rel="prefetch" href="/assets/js/21.a61c0dc6.js"><link rel="prefetch" href="/assets/js/22.064be90d.js"><link rel="prefetch" href="/assets/js/23.3eef508c.js"><link rel="prefetch" href="/assets/js/24.c3235746.js"><link rel="prefetch" href="/assets/js/25.fe0dea0c.js"><link rel="prefetch" href="/assets/js/26.06ac7396.js"><link rel="prefetch" href="/assets/js/27.81f71547.js"><link rel="prefetch" href="/assets/js/28.b62c3926.js"><link rel="prefetch" href="/assets/js/29.aea67521.js"><link rel="prefetch" href="/assets/js/3.b500071e.js"><link rel="prefetch" href="/assets/js/30.cd87d286.js"><link rel="prefetch" href="/assets/js/31.788db9ae.js"><link rel="prefetch" href="/assets/js/4.afdd57a4.js"><link rel="prefetch" href="/assets/js/5.d738a71a.js"><link rel="prefetch" href="/assets/js/6.7180334e.js"><link rel="prefetch" href="/assets/js/7.7495ebed.js"><link rel="prefetch" href="/assets/js/9.ae0ebac1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.116391f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Luke 的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/html/" class="sidebar-link">HTML</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/css/" class="sidebar-heading clickable router-link-active open"><span>CSS</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/css/flow-width-rule.html" class="active sidebar-link">CSS流体布局下的宽度分离原则</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/css/box.html" class="sidebar-link">盒模型与box-sizing</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/js/" class="sidebar-heading clickable"><span>JS 重点概念梳理</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/library/" class="sidebar-heading clickable"><span>前端框架</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/node/" class="sidebar-heading clickable"><span>node</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/engineering/" class="sidebar-heading clickable"><span>工程化</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/job/" class="sidebar-link">面试之道</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css流体布局下的宽度分离原则"><a href="#css流体布局下的宽度分离原则" aria-hidden="true" class="header-anchor">#</a> CSS流体布局下的宽度分离原则</h1> <p>所谓“宽度分离原则”，就是CSS中的width属性不与影响宽度的padding/border（有时候包含margin）属性共存，也就是不能出现下面的组合</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">或者
+.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>建议的写法是 分离，width独立占用一层标签，而padding、border、margin利用流动性在内部自适应呈现</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.content</span> <span class="token punctuation">{</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span> 
+    <span class="token property">margin</span><span class="token punctuation">:</span> 10px auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="为什么要宽度分离"><a href="#为什么要宽度分离" aria-hidden="true" class="header-anchor">#</a> 为什么要宽度分离</h3> <p>在前端领域，一提到分离。首先一定是便于维护。比如样式和行为分离，前后端分离。或者是这里的宽度分离。
+由于盒尺寸中的4个盒子都能影响到宽度，自然页面元素的最终宽度很容易发生影响。</p> <p>比如：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span>1px solid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>此时的宽度为102px，当设计师希望元素边框内有20px的留白，此时我们会增加padding设置。
+所以我们还得通过计算，减去原来的width来控制padding增加的像素。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但如果通过宽度分离原则，维护起来会非常简单。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 102px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.content</span> <span class="token punctuation">{</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>维护非常简单，通过块级盒子的自动适应父级元素的宽度特性，让浏览器自动计算了</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/html/" class="prev">
+          HTML
+        </a></span> <span class="next"><a href="/css/box.html">
+          盒模型与box-sizing
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3f85ca2b.js" defer></script><script src="/assets/js/2.8c8f942d.js" defer></script><script src="/assets/js/8.c2cd7ba8.js" defer></script>
+  </body>
+</html>
